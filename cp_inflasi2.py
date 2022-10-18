@@ -2,10 +2,11 @@ import streamlit as st
 import pandas as pd
 import plotly.graph_objects as go
 
-df = pd.read_excel('Capstone Project - Inflasi.xlsx')
+url1 = 'https://raw.githubusercontent.com/rvoktrzl/tetris/main/data/cp_inflasi_raw_202210180850.csv'
+df = pd.read_csv(url1)
 st.set_page_config(layout='wide')
 
-st.image('istockphoto-1180481421-612x612.jpg', width=1250)
+st.image('https://raw.githubusercontent.com/rvoktrzl/tetris/main/inflation.jpg', width=1250)
 
 st.title('Dunia dalam Peningkatan Inflasi, Bagaimana dengan Indonesia?')
 st.markdown('Rivo Oktrizal - Capstone Project TETRIS PRoA 2022')
@@ -32,7 +33,8 @@ st.markdown('<div style="text-align: justify;">Grafik menggambarkan peningkatan 
 st.markdown('<div style="text-align: justify;">Tingkat inflasi yang meningkat tentu saja bisa dirasakan langsung dari kenaikan harga. Sejauh apa kenaikan harga yang dialami Indonesia dengan peningkatan tingkat inflasi year-on sebesar 4,35%?</div>', unsafe_allow_html=True)
 st.markdown('<div style="text-align: justify;">Kenaikan harga akan dilihat dari dua pembagian komoditi, yaitu komoditi pangan dan komoditi energi. Komoditi pangan dilihat berdasarkan sepuluh macam harga bahan pokok dasar yang ada dipasar seperti beras, daging ayam, daging sapi, telur ayam, bawang merah, bawang putih, cabai merah, cabai rawit, minyak goreng, dan gula pasir. Sedangkan dari komoditi energi dilihat berdasarkan lima macam Bahan Bakar Minyak (BBM) seperti pertalite, pertamax, pertamax turbo, dexlite, dan pertamina dex. Semua komoditi dipilih berdasarkan pertimbangan komoditi yang bersentuhan langsung dengan masyarakat secara umum dan keterbatasan sumber data yang ada.</div>', unsafe_allow_html=True)
 
-df_pangan = pd.read_excel('cp_inflasi_komoditi_pangan.xlsx')
+url2 = 'https://raw.githubusercontent.com/rvoktrzl/tetris/main/data/cp_inflasi_pangan_202210180818.csv'
+df_pangan = pd.read_csv(url2)
 col1, col2 = st.columns(2)
 
 fig_pangan_bar = go.Figure(go.Bar(
@@ -74,7 +76,8 @@ col2.plotly_chart(fig_pangan_line)
 
 st.markdown('<div style="text-align: justify;">Secara year-on-year growth komoditi pangan mengalami kenaikan yang signifikan pada beberapa harga bahan pokok. Sedangkan grafik pergerakan harga komoditi pangan menunjukkan adanya faktor lain yang mempengaruhi keadaan harga bahan pokok selain meningkatnya tingkat inflasi Indonesia. Hal ini dapat dilihat dengan seringnya terjadi lonjakan harga bahan pokok sebelum pecahnya perang Rusia-Ukraina yang menjadi tolak ukur penyebab meningkatnya tingkat inflasi Indonesia saat ini. Tetapi dari tingkat penurunan antara lonjakan harga pasca pecahnya perang, terlihat kenaikan pada harga dasar bahan pokok yang menunjukkan tingkat inflasi Indonesia saat ini telah mempengaruhi kenaikan harga komoditi pangan.</div>', unsafe_allow_html=True)
 
-df_energi = pd.read_excel('cp_inflasi_komoditi_energi.xlsx')
+url3 = 'https://raw.githubusercontent.com/rvoktrzl/tetris/main/data/cp_inflasi_energi_202210180818.csv'
+df_energi = pd.read_csv(url3)
 col1, col2 = st.columns(2)
 
 fig_energi_bar = go.Figure(go.Bar(
@@ -106,7 +109,8 @@ col2.plotly_chart(fig_energi_line)
 
 st.markdown('<div style="text-align: justify;">Secara year-on-year growth komoditi energi secara keseluruhan telah mengalami kenaikan harga. Grafik pergerakan harga komoditi energi menunjukkan enam bulan pasca pecahnya perang, tepatnya per bulan September 2022 terjadi kenaikan harga BBM dimana pada bulan tersebut tingkat inflasi Indonesia berada pada angka 5,95%. Hal ini menunjukkan bahwa tingkat inflasi Indonesia telah mempengaruhi kenaikan harga BBM di indonesia.</div>', unsafe_allow_html=True)
 
-df_komoditi = pd.read_excel('cp_inflasi_komoditi.xlsx')
+url4 = 'https://raw.githubusercontent.com/rvoktrzl/tetris/main/data/cp_inflasi_komoditi_202210180818.csv'
+df_komoditi = pd.read_csv(url4)
 col1, col2, col3 = st.columns(3)
 
 col1.write('')

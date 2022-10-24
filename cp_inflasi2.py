@@ -1,3 +1,4 @@
+from logging import PlaceHolder
 import streamlit as st
 import pandas as pd
 import plotly.graph_objects as go
@@ -109,6 +110,7 @@ st.markdown('<div style="text-align: justify;">Secara year-on-year growth komodi
 
 url4 = 'https://raw.githubusercontent.com/rvoktrzl/tetris/main/data/cp_inflasi_komoditi_202210180818.csv'
 df_komoditi = pd.read_csv(url4)
+
 
 fig_komoditi_bar = go.Figure(go.Bar(
             x=df_komoditi['YoY Growth (%)'],

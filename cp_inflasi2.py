@@ -109,9 +109,7 @@ st.markdown('<div style="text-align: justify;">Secara year-on-year growth komodi
 
 url4 = 'https://raw.githubusercontent.com/rvoktrzl/tetris/main/data/cp_inflasi_komoditi_202210180818.csv'
 df_komoditi = pd.read_csv(url4)
-col1, col2, col3 = st.columns(3)
 
-col1.write('')
 fig_komoditi_bar = go.Figure(go.Bar(
             x=df_komoditi['YoY Growth (%)'],
             y=df_komoditi['Komoditi'],
@@ -120,9 +118,7 @@ fig_komoditi_bar.update_layout(
                   title='YoY Growth Komoditi Pangan VS Komoditi Energi', 
                   xaxis_title='Year-on-year Growth (%)', 
                   yaxis_title='Komoditi')
-col2.plotly_chart(fig_komoditi_bar)
-
-col3.write('')
+st.plotly_chart(fig_komoditi_bar)
 
 st.markdown('<div style="text-align: justify;">Secara keseluruhan dengan kenaikan year-on-year tingkat inflasi sebesar 4,35%, grafik menunjukkan kenaikan harga komoditi energi lebih tinggi daripada komoditi pangan, dimana masing-masing kenaikan harga mencapai 51% untuk komoditi energi dibandingkan tahun lalu dan 25% untuk komoditi pangan dibandingkan tahun lalu. Hal ini menunjukkan bahwa pecahnya perang Rusia-Ukraina benar-benar berpengaruh signifikan terhadap komoditi energi dunia dan mendorong meningkatnya tingkat inflasi dunia. Kenaikan harga komoditi energi akan menjadi rentetan panjang yang mendorong kenaikan harga komoditi-komoditi lainnya, yang mana hal inilah yang akan memperburuk keadaan ekonomi kedepannya.</div>', unsafe_allow_html=True)
 st.markdown('<div style="text-align: justify;">Tingkat inflasi dunia per bulan September 2022 telah mengalami peningkatan year-on-year sebesar 5,20% dan mendorong peningkatan tingkat inflasi Indonesia year-on-year sebesar 4,35%. Dimana masing-masing tingkat inflasi dunia dan tingkat inflasi Indonesia saat ini berada pada angka 10,30% dan 5,95%. Salah satu dampak peningkatan tingkat inflasi ini adalah mendorong terjadinya kenaikan harga yang cukup signifikan pada komoditi energi. Jika hal ini terus berlanjut, tentu akan memperburuk keadaan ekonomi kedepannya dan berdampak pada aspek-aspek dalam lingkup ekonomi lainnya yang tidak diukur dalam analisis ini. Untuk itu kita harus bisa menentukan sikap dalam mengatur bagaimana bertahan dalam keadaan ekonomi tersebut. Dimulai dengan mengatur pengeluaran dan simpanan uang, mengatur investasi dan aset yang mungkin terdampak, serta mengatur pembayaran hutang atau cicilan.</div>', unsafe_allow_html=True)

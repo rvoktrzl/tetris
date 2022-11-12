@@ -6,7 +6,7 @@ url1 = 'https://raw.githubusercontent.com/rvoktrzl/tetris/main/data/cp_inflasi_r
 df = pd.read_csv(url1)
 st.set_page_config(layout='centered')
 
-st.image('https://raw.githubusercontent.com/rvoktrzl/tetris/main/inflation.jpg')
+st.image('https://raw.githubusercontent.com/rvoktrzl/tetris/main/dqlab.png')
 
 st.title('Dunia dalam Peningkatan Inflasi, Bagaimana dengan Indonesia?')
 

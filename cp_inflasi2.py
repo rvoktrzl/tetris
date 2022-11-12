@@ -4,7 +4,7 @@ import plotly.graph_objects as go
 
 url1 = 'https://raw.githubusercontent.com/rvoktrzl/tetris/main/data/cp_inflasi_raw_202210180850.csv'
 df = pd.read_csv(url1)
-st.set_page_config(layout='centered')
+st.set_page_config(layout='wide')
 
 st.image('https://raw.githubusercontent.com/rvoktrzl/tetris/main/dqlab.png')
 
